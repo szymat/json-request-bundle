@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyBundles\JsonRequestBundle\Tests\EventListener;
+namespace SymfonyBundles\JsonXmlRequestBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
-use SymfonyBundles\JsonRequestBundle\Tests\TestCase;
-use SymfonyBundles\JsonRequestBundle\EventListener\RequestTransformerListener;
+use SymfonyBundles\JsonXmlRequestBundle\Tests\TestCase;
+use SymfonyBundles\JsonXmlRequestBundle\EventListener\RequestTransformerListener;
 
 class RequestTransformerListenerTest extends TestCase
 {
@@ -28,6 +28,21 @@ class RequestTransformerListenerTest extends TestCase
     {
         $data = ['foo' => 'bar'];
         $request = $this->createRequest($contentType, \json_encode($data));
+        $event = $this->createGetResponseEventMock($request);
+
+        $this->listener->onKernelRequest($event);
+
+        $this->assertEquals($data, $event->getRequest()->request->all());
+        $this->assertNull($event->getResponse());
+    }
+
+    /**
+     * @dataProvider jsonContentTypes
+     */
+    public function testTransformXmlRequest(): void
+    {
+        $data = ['foo' => 'bar'];
+        $request = $this->createRequest('application/xml', '<?xml version="1.0" encoding="UTF-8"?><root><foo>bar</foo></root>');
         $event = $this->createGetResponseEventMock($request);
 
         $this->listener->onKernelRequest($event);

@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyBundles\JsonRequestBundle\Tests\DependencyInjection;
+namespace SymfonyBundles\JsonXmlRequestBundle\Tests\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
-use SymfonyBundles\JsonRequestBundle\Tests\TestCase;
+use SymfonyBundles\JsonXmlRequestBundle\Tests\TestCase;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use SymfonyBundles\JsonRequestBundle\DependencyInjection\Configuration;
+use SymfonyBundles\JsonXmlRequestBundle\DependencyInjection\Configuration;
 
 class ConfigurationTest extends TestCase
 {
