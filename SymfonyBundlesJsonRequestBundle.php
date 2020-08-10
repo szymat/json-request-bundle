@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle;
+namespace szymat\JsonXmlRequestBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

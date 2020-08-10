@@ -1,10 +1,10 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\DependencyInjection;
+namespace szymat\JsonXmlRequestBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use SymfonyBundles\JsonXmlRequestBundle\EventListener\RequestTransformerListener;
+use szymat\JsonXmlRequestBundle\EventListener\RequestTransformerListener;
 
 class Configuration implements ConfigurationInterface
 {

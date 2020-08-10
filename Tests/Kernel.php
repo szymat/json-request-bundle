@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\Tests;
+namespace szymat\JsonXmlRequestBundle\Tests;
 
 class Kernel
 {

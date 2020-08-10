@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\EventListener;
+namespace szymat\JsonXmlRequestBundle\EventListener;
 
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 

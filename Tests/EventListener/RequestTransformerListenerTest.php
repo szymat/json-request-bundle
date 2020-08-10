@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\Tests\EventListener;
+namespace szymat\JsonXmlRequestBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
-use SymfonyBundles\JsonXmlRequestBundle\Tests\TestCase;
-use SymfonyBundles\JsonXmlRequestBundle\EventListener\RequestTransformerListener;
+use szymat\JsonXmlRequestBundle\Tests\TestCase;
+use szymat\JsonXmlRequestBundle\EventListener\RequestTransformerListener;
 
 class RequestTransformerListenerTest extends TestCase
 {

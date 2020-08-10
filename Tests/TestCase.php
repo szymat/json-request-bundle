@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\Tests;
+namespace szymat\JsonXmlRequestBundle\Tests;
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {

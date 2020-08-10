@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\Tests\DependencyInjection;
+namespace szymat\JsonXmlRequestBundle\Tests\DependencyInjection;
 
-use SymfonyBundles\JsonXmlRequestBundle\Tests\TestCase;
+use szymat\JsonXmlRequestBundle\Tests\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use SymfonyBundles\JsonXmlRequestBundle\DependencyInjection\JsonRequestExtension;
+use szymat\JsonXmlRequestBundle\DependencyInjection\JsonRequestExtension;
 
 class JsonRequestExtensionTest extends TestCase
 {
