@@ -1,19 +1,23 @@
 {
-    "name": "symfony-bundles/json-request-bundle",
+    "name": "szymat/json-xml-request-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony JsonRequest Bundle",
-    "keywords": ["json", "symfony", "bundle", "angular"],
-    "homepage": "https://github.com/symfony-bundles/json-request-bundle",
+    "description": "Symfony Json and XML Request Bundle (Fork)",
+    "keywords": ["json", "xml", "symfony", "bundle", "angular"],
+    "homepage": "https://github.com/szymat/json-request-bundle",
     "license": "MIT",
     "authors": [
         {
             "name": "Dmitry Khaperets",
             "email": "khaperets@gmail.com"
+        },
+        {
+            "name": "Szymon Matuszewski",
+            "email": "matuszewskisy@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "SymfonyBundles\\JsonRequestBundle\\": ""
+            "SymfonyBundles\\JsonXmlRequestBundle\\": ""
         },
         "exclude-from-classmap": [
             "/Tests/"

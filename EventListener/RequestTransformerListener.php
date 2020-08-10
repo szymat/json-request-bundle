@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonRequestBundle\EventListener;
+namespace SymfonyBundles\JsonXmlRequestBundle\EventListener;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -33,7 +33,7 @@ class RequestTransformerListener implements RequestListenerInterface
      */
     private function isAvailable(Request $request): bool
     {
-        return 'json' === $request->getContentType() && $request->getContent();
+        return in_array($request->getContentType(), ['json', 'xml']) && $request->getContent();
     }
 
     /**
@@ -43,7 +43,15 @@ class RequestTransformerListener implements RequestListenerInterface
      */
     private function transform(Request $request): bool
     {
-        $data = \json_decode($request->getContent(), true);
+        $content = $request->getContent();
+
+        // Transform xml to json request
+        if ($request->getContentType() === 'xml') {
+            $xml = \simplexml_load_string($content);
+            $content = \json_encode($xml);
+        }
+
+        $data = \json_decode($content, true);
 
         if (\json_last_error() !== \JSON_ERROR_NONE) {
             return false;
