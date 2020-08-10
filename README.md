@@ -1,4 +1,4 @@
-SymfonyBundles JsonRequest Bundle
+SymfonyBundles JsonXmlRequest Bundle
 =================================
 
 [![SensioLabsInsight][sensiolabs-insight-image]][sensiolabs-insight-link]
@@ -37,12 +37,14 @@ public function indexAction(Request $request)
 }
 ```
 
+All xml requests will be automatically parsed to Json
+
 Installation
 ------------
 * Require the bundle with composer:
 
 ``` bash
-composer require symfony-bundles/json-request-bundle
+composer require szymat/json-request-bundle
 ```
 
 [package-link]: https://packagist.org/packages/symfony-bundles/json-request-bundle
