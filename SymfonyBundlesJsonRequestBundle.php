@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle;
+namespace SymfonyBundles\JsonRequestBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\Tests\DependencyInjection;
+namespace SymfonyBundles\JsonRequestBundle\Tests\DependencyInjection;
 
-use SymfonyBundles\JsonXmlRequestBundle\Tests\TestCase;
+use SymfonyBundles\JsonRequestBundle\Tests\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use SymfonyBundles\JsonXmlRequestBundle\DependencyInjection\JsonRequestExtension;
+use SymfonyBundles\JsonRequestBundle\DependencyInjection\JsonRequestExtension;
 
 class JsonRequestExtensionTest extends TestCase
 {
@@ -13,7 +13,7 @@ class JsonRequestExtensionTest extends TestCase
     {
         $container = new ContainerBuilder();
         $extension = new JsonRequestExtension();
-        $listenerService = 'sb_json_xml_request.request_transformer';
+        $listenerService = 'sb_json_request.request_transformer';
 
         $this->assertInstanceOf(Extension::class, $extension);
 
@@ -26,6 +26,6 @@ class JsonRequestExtensionTest extends TestCase
     {
         $extension = new JsonRequestExtension();
 
-        $this->assertStringEndsWith('json_xml_request', $extension->getAlias());
+        $this->assertStringEndsWith('json_request', $extension->getAlias());
     }
 }

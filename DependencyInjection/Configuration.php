@@ -1,10 +1,10 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\DependencyInjection;
+namespace SymfonyBundles\JsonRequestBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use SymfonyBundles\JsonXmlRequestBundle\EventListener\RequestTransformerListener;
+use SymfonyBundles\JsonRequestBundle\EventListener\RequestTransformerListener;
 
 class Configuration implements ConfigurationInterface
 {
@@ -13,7 +13,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $builder = new TreeBuilder('sb_json_xml_request');
+        $builder = new TreeBuilder('sb_json_request');
 
         if (\method_exists($builder, 'getRootNode')) {
             $rootNode = $builder->getRootNode();

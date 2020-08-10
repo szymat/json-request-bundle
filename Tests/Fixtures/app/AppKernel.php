@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\Tests\Fixtures\app;
+namespace SymfonyBundles\JsonRequestBundle\Tests\Fixtures\app;
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Filesystem\Filesystem;
@@ -19,7 +19,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \SymfonyBundles\JsonXmlRequestBundle\SymfonyBundlesJsonRequestBundle(),
+            new \SymfonyBundles\JsonRequestBundle\SymfonyBundlesJsonRequestBundle(),
         ];
 
         return $bundles;

@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\JsonXmlRequestBundle\DependencyInjection;
+namespace SymfonyBundles\JsonRequestBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -21,7 +21,7 @@ class JsonRequestExtension extends ConfigurableExtension
             'priority' => $configs['listener']['priority'],
         ]);
 
-        $container->setDefinition('sb_json_xml_request.request_transformer', $listener);
+        $container->setDefinition('sb_json_request.request_transformer', $listener);
     }
 
     /**
@@ -29,6 +29,6 @@ class JsonRequestExtension extends ConfigurableExtension
      */
     public function getAlias()
     {
-        return 'sb_json_xml_request';
+        return 'sb_json_request';
     }
 }
